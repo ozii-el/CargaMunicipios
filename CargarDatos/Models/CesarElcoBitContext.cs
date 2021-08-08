@@ -57,24 +57,24 @@ namespace CargarDatos.Models
 
             modelBuilder.Entity<Localidad>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.EntidadId, e.MunicipioId, e.LocalidadId });
 
                 entity.ToTable("Localidad");
+
+                entity.Property(e => e.EntidadId).HasColumnName("EntidadID");
+
+                entity.Property(e => e.MunicipioId).HasColumnName("MunicipioID");
+
+                entity.Property(e => e.LocalidadId).HasColumnName("LocalidadID");
 
                 entity.Property(e => e.Ambito)
                     .IsRequired()
                     .HasMaxLength(500)
                     .IsUnicode(false);
 
-                entity.Property(e => e.EntidadId).HasColumnName("EntidadID");
-
                 entity.Property(e => e.LatitudDecimal).HasColumnType("decimal(12, 8)");
 
-                entity.Property(e => e.LocalidadId).HasColumnName("LocalidadID");
-
                 entity.Property(e => e.LongitudDecimal).HasColumnType("decimal(12, 8)");
-
-                entity.Property(e => e.MunicipioId).HasColumnName("MunicipioID");
 
                 entity.Property(e => e.Nombre)
                     .IsRequired()
@@ -84,7 +84,7 @@ namespace CargarDatos.Models
 
             modelBuilder.Entity<Municipio>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.EntidadId, e.MunicipioId });
 
                 entity.ToTable("Municipio");
 
@@ -94,7 +94,7 @@ namespace CargarDatos.Models
 
                 entity.Property(e => e.Nombre)
                     .IsRequired()
-                    .HasMaxLength(500)
+                    .HasMaxLength(300)
                     .IsUnicode(false);
             });
 

@@ -5801,11 +5801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DevFundamentals\\CargarDatos\\CargarDatos.csproj",
+      "projectUniqueName": "C:\\DevFundamentals\\Tarea4\\CargarDatos\\CargarDatos.csproj",
       "projectName": "CargarDatos",
-      "projectPath": "C:\\DevFundamentals\\CargarDatos\\CargarDatos.csproj",
+      "projectPath": "C:\\DevFundamentals\\Tarea4\\CargarDatos\\CargarDatos.csproj",
       "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
-      "outputPath": "C:\\DevFundamentals\\CargarDatos\\obj\\",
+      "outputPath": "C:\\DevFundamentals\\Tarea4\\CargarDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
